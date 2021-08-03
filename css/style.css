@@ -2820,6 +2820,10 @@ body.ie ._ibg img {
     font-weight: 500;
   }
 
+  .benefits-slider__controls {
+    display: none;
+  }
+
   .news__items .swiper-wrapper {
     display: -ms-grid;
     display: grid;
