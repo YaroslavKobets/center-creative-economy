@@ -18,7 +18,8 @@
 		<div class="header__container _container">
 			<div class="header__body">
 				<div class="header__logo">
-					<a href="#" class="header__logo"><img src="img/logo.svg" alt="" /></a>
+					<a href="#" class="header__logo_pc"><img src="img/logo.svg" alt="" /></a>
+					<a href="#" class="header__logo_mobil"><img src="img/logo-mobil.svg" alt="" /></a>
 				</div>
 				<div class="header__main">
 					<div class="header__manu menu">
@@ -105,7 +106,13 @@
 						</div>
 						<div class="main-slider__controls controls-slider">
 							<div class="controls-slider__top">
-								<div class="swiper-slide-line"></div>
+								<div class="main-slider__fraction">
+									<div class="main-slider__current">1</div>
+									<div class="main-slider__total">1</div>
+								</div>
+								<div class="controls-slider__dotts-top">
+
+								</div>
 							</div>
 							<div class="controls-slider__center second-slider">
 								<div class="second-slider__body _swiper">
@@ -189,7 +196,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="about-us__download"></div>
+						<div class="about-us__download">
+							<a href="#" class=" btn about-us__download-btn  _icon-arrow-link"></a>
+							<div class="about-us__download-text">Завантажити <br> офіційну презентацію</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -199,13 +209,13 @@
 						<div class="benefits__title _title">Центр <span>креативної <br>
 								економіки</span> Кривого Рогу</div>
 						<div class="benefits__descr">Пілотний проєкт, який стартує у 2023 році.</div>
-						<div class="benefits__content">
-							<div class="benefits__item benefits__item_1 benefits__item_h _ibg">
+						<div class="benefits__content benefits-slider _swiper">
+							<div class="benefits__item benefits-slider__slide benefits__item_1 benefits__item_h _ibg">
 								<img src="img/benefits-1.png" alt="">
 								<div class="benefits__info info-benefits ">
 									<div class="info-benefits__title">Навчання</div>
 									<div class="info-benefits__descr">ІТ, підприємництво, “Soft Skills”</div>
-									<div class="info-benefits__btn _icon-arrow-link">Читати</div>
+									<a href="#" class="info-benefits__btn _icon-arrow-link">Читати</a>
 								</div>
 							</div>
 							<div class="benefits__item benefits__item_2 benefits__item_v _ibg">
@@ -213,7 +223,7 @@
 								<div class="benefits__info info-benefits">
 									<div class="info-benefits__title">Нетворкінг</div>
 									<div class="info-benefits__descr">Події для розвитку та успіху</div>
-									<div class="info-benefits__btn _icon-arrow-link">Читати</div>
+									<a href="#" class="info-benefits__btn _icon-arrow-link">Читати</a>
 								</div>
 							</div>
 							<div class="benefits__item benefits__item_3 benefits__item_v _ibg">
@@ -223,7 +233,7 @@
 									<div class="info-benefits__descr">Розвиток виробничих стартапів
 										за допомогою експертизи
 										виробничих бізнес-акселераторів</div>
-									<div class="info-benefits__btn _icon-arrow-link">Читати</div>
+									<a href="#" class="info-benefits__btn _icon-arrow-link">Читати</a>
 								</div>
 							</div>
 							<div class="benefits__item benefits__item_4 benefits__item_h _ibg">
@@ -233,7 +243,7 @@
 										та <br> клаб-офіси</div>
 									<div class="info-benefits__descr">Розміщення і сервіси
 										для креативного бізнесу</div>
-									<div class="info-benefits__btn _icon-arrow-link">Читати</div>
+									<a href="#" class="info-benefits__btn _icon-arrow-link">Читати</a>
 								</div>
 							</div>
 							<div class="benefits__item benefits__item_5 benefits__item_h _ibg">
@@ -242,7 +252,7 @@
 									<div class="info-benefits__title">Фінансування</div>
 									<div class="info-benefits__descr">Фахова допомога в отриманні інвестиційного,
 										позикового, грантового фінансування</div>
-									<div class="info-benefits__btn _icon-arrow-link">Читати</div>
+									<a href="#" class="info-benefits__btn _icon-arrow-link">Читати</a>
 								</div>
 							</div>
 							<div class="benefits__item benefits__item_6 benefits__item_v _ibg">
@@ -252,12 +262,16 @@
 										виробництво</div>
 									<div class="info-benefits__descr">Платформа для розміщення
 										малих виробництв</div>
-									<div class="info-benefits__btn _icon-arrow-link">Читати</div>
+									<a href="#" class="info-benefits__btn _icon-arrow-link">Читати</a>
 								</div>
 							</div>
 							<div class=" benefits__item_7">
 								<a href="#" class="school__btn btn _icon-btn-dots">Дивитись Більше</a>
 							</div>
+						</div>
+						<div class="benefits-slider__controls">
+							<button type="button" class="school-slider-arrow benefits-slider-arrow_prev _icon-arrow-slider"></button>
+							<button type="button" class="school-slider-arrow benefits-slider-arrow_next _icon-arrow-slider"></button>
 						</div>
 					</div>
 				</div>
@@ -283,7 +297,7 @@
 											держави для розвитку
 											креативної економіки та
 											людського капіталу в Україні.</div>
-										<div class="school-slider__btn _icon-arrow-link">Читати</div>
+										<a href="#" class="school-slider__btn _icon-arrow-link">Читати</a>
 									</div>
 									<div class="school-slider__image _ibg">
 										<img src="img/school-1.png" alt="">
@@ -298,7 +312,7 @@
 											держави для розвитку
 											креативної економіки та
 											людського капіталу в Україні.</div>
-										<div class="school-slider__btn _icon-arrow-link">Читати</div>
+										<a href="#" class="school-slider__btn _icon-arrow-link">Читати</a>
 									</div>
 									<div class="school-slider__image _ibg">
 										<img src="img/school-1.png" alt="">
@@ -313,16 +327,22 @@
 											держави для розвитку
 											креативної економіки та
 											людського капіталу в Україні.</div>
-										<div class="school-slider__btn _icon-arrow-link">Читати</div>
+										<a href="#" class="school-slider__btn _icon-arrow-link">Читати</a>
 									</div>
 									<div class="school-slider__image _ibg">
 										<img src="img/school-1.png" alt="">
 									</div>
 								</div>
 							</div>
+
 						</div>
+
 						<div class="school__bottom">
 							<a href="#" class="school__btn btn _icon-btn-dots">Дивитись Більше</a>
+							<div class="school-slider__controls">
+								<button type="button" class="school-slider-arrow school-slider-arrow_prev _icon-arrow-slider"></button>
+								<button type="button" class="school-slider-arrow school-slider-arrow_next _icon-arrow-slider"></button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -331,8 +351,8 @@
 				<div class="news__container _container">
 					<div class="news__body">
 						<h2 class="news__title">Ньюзрум</h2>
-						<div class="news__items">
-							<a href="#" class="news__item item-news">
+						<div class="news__items _swiper news-slider">
+							<a href="#" class="news__item news-slider__slide item-news">
 								<div class="item-news__image _ibg">
 									<img src="img/news-1.png" alt="">
 								</div>
@@ -343,7 +363,7 @@
 									бізнес-партнери?</div>
 								<div class="item-news__date _icon-arrow-link">15.07.2021</div>
 							</a>
-							<a href="#" class="news__item item-news">
+							<a href="#" class="news__item news-slider__slide item-news">
 								<div class="item-news__image _ibg">
 									<img src="img/news-1.png" alt="">
 								</div>
@@ -354,7 +374,7 @@
 									бізнес-партнери?</div>
 								<div class="item-news__date _icon-arrow-link">15.07.2021</div>
 							</a>
-							<a href="#" class="news__item item-news">
+							<a href="#" class="news__item news-slider__slide item-news">
 								<div class="item-news__image _ibg">
 									<img src="img/news-1.png" alt="">
 								</div>

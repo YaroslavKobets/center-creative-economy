@@ -63,7 +63,7 @@ if (sliderScrollItems.length > 0) {
 
 function sliders_bild_callback(params) {}
 if (document.querySelector(".background-slider__body")) {
-	let backgroundSlider = new Swiper(".background-slider__body", {
+	new Swiper(".background-slider__body", {
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
@@ -71,7 +71,7 @@ if (document.querySelector(".background-slider__body")) {
 		watchOverflow: true,
 		speed: 3000,
 		touchRatio: 0,
-		// loop: true,
+		loop: true,
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: true,
@@ -92,7 +92,7 @@ if (document.querySelector(".main-slider__body")) {
 		spaceBetween: 0,
 		watchOverflow: true,
 		speed: 3000,
-		// loop: true,
+		loop: true,
 		watchSlidesProgress: true,
 		// grabCursor: true,
 		touchRatio: 0,
@@ -101,7 +101,7 @@ if (document.querySelector(".main-slider__body")) {
 			disableOnInteraction: true,
 		},
 		pagination: {
-			el: ".controls-slider__dotts",
+			el: ".main-slider__controls .controls-slider__dotts",
 			clickable: true,
 		},
 		navigation: {
@@ -109,23 +109,30 @@ if (document.querySelector(".main-slider__body")) {
 			prevEl: ".main-slider .slider-arrow_prev",
 		},
 	});
+	let mainSliderAllSlides = document.querySelector(".main-slider__total");
+	let mainSliderCurrentSlide = document.querySelector(".main-slider__current");
+	mainSliderAllSlides.innerHTML = mainSlider.slides.length;
+	mainSlider.on("slideChange", function () {
+		let currentSlide = ++mainSlider.realIndex;
+		mainSliderCurrentSlide.innerHTML = currentSlide;
+	});
 }
 if (document.querySelector(".second-slider__body")) {
-	let secondSlider = new Swiper(".second-slider__body", {
+	new Swiper(".second-slider__body", {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		watchOverflow: true,
 		speed: 3000,
 		touchRatio: 0,
-		// loop: true,
+		loop: true,
 
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: true,
 		},
 		pagination: {
-			el: ".controls-slider__dotts",
-			clickable: true,
+			el: ".controls-slider__dotts-top",
+			clickable: false,
 		},
 		navigation: {
 			nextEl: ".main-slider .slider-arrow_next",
@@ -137,15 +144,78 @@ if (document.querySelector(".school-slider")) {
 	new Swiper(".school-slider", {
 		observer: true,
 		observeParents: true,
-		slidesPerView: 1,
 		spaceBetween: 30,
 		watchOverflow: true,
-		centeredSlides: true,
+
+		watchSlidesProgress: true,
 		loop: true,
-		speed: 2000,
+		loopedSlides: 10,
+		speed: 3000,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: true,
+		},
 		navigation: {
 			nextEl: ".school-slider__controls .school-slider-arrow_next",
 			prevEl: ".school-slider__controls .school-slider-arrow_prev",
+		},
+		pagination: {
+			el: ".school__bottom .school-slider__pagination",
+			type: "progressbar",
+		},
+		breakpoints: {
+			290: {
+				slidesPerView: 1.2,
+				centeredSlides: false,
+			},
+			601: {
+				slidesPerView: 1,
+				centeredSlides: true,
+			},
+		},
+	});
+}
+if (document.querySelector(".news-slider")) {
+	new Swiper(".news-slider", {
+		watchOverflow: true,
+		breakpoints: {
+			290: {
+				slidesPerView: 1.2,
+				spaceBetween: 20,
+			},
+			479.98: {
+				slidesPerView: 2.2,
+				touchRatio: 1,
+				spaceBetween: 25,
+			},
+			767.98: {
+				touchRatio: 0,
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+		},
+	});
+}
+if (document.querySelector(".benefits-slider")) {
+	new Swiper(".benefits-slider", {
+		navigation: {
+			nextEl: ".benefits-slider__controls .benefits-slider-arrow_next",
+			prevEl: ".benefits-slider__controls .benefits-slider-arrow_prev",
+		},
+		breakpoints: {
+			290: {
+				slidesPerView: 1.2,
+				spaceBetween: 20,
+			},
+			479.98: {
+				slidesPerView: 2.2,
+				touchRatio: 1,
+				spaceBetween: 25,
+			},
+			767.98: {
+				slidesPerView: "auto",
+				touchRatio: 0,
+			},
 		},
 	});
 }
@@ -1016,14 +1086,16 @@ window.onload = function () {
 	const headerObserver = new IntersectionObserver(callback);
 	headerObserver.observe(headerElement);
 };
-const slider = document.querySelector(".slider__range input");
-const sliderImage = document.querySelector(".slider__body .slider__before");
-const dragLine = document.querySelector(".slider__range .slider__drag-line");
-slider.oninput = () => {
-	let sliderVal = slider.value;
-	dragLine.style.left = sliderVal + "%";
-	sliderImage.style.width = sliderVal + "%";
-};
+if (document.querySelector(".slider__body")) {
+	const slider = document.querySelector(".slider__range input");
+	const sliderImage = document.querySelector(".slider__body .slider__before");
+	const dragLine = document.querySelector(".slider__range .slider__drag-line");
+	slider.oninput = () => {
+		let sliderVal = slider.value;
+		dragLine.style.left = sliderVal + "%";
+		sliderImage.style.width = sliderVal + "%";
+	};
+}
 
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
